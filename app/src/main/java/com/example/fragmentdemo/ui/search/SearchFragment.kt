@@ -1,0 +1,41 @@
+package com.example.fragmentdemo.ui.search
+
+import androidx.lifecycle.ViewModelProvider
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
+import com.example.fragmentdemo.R
+import com.example.fragmentdemo.ui.BaseFragment
+
+class SearchFragment : BaseFragment() {
+
+    companion object {
+        fun newInstance() = SearchFragment()
+    }
+
+    private lateinit var viewModel: SearchViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        return inflater.inflate(R.layout.fragment_search, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        view.findViewById<Button>(R.id.bt_search).setOnClickListener{
+            findNavController().navigate(R.id.action_searchFragment_to_errorFragment)
+        }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+        // TODO: Use the ViewModel
+    }
+
+}

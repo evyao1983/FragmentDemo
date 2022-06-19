@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FragmentDemo</string>
+    <string name="home">Welcome to HSBC</string>
+    <string name="login_hint">Please enter your information</string>
+    <string name="user_name">UserName</string>
+    <string name="pass_word">Password</string>
+    <string name="login">Login</string>
+    <string name="logoff">Logoff</string>
+    <string name="search">Search</string>
+    <string name="search_hint">search repositories</string>
+    <string name="error">Page not found 404</string>
+    <string name="login_fail">Please enter correct UserName or Password.</string>
+    <string name="name">Profile Information</string>
+</resources>
